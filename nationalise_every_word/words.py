@@ -3,6 +3,7 @@ from json import load, dump
 from copy import deepcopy
 from contextlib import contextmanager
 
+
 class Store(object):
     def __init__(self, store_file, defaults):
         self._store_file = store_file
@@ -31,10 +32,12 @@ with open(config['words_file'], 'r') as words_file:
 
 store = Store(config['store_file'], {'latest_index': 0})
 
+
 def pop_word():
     latest_index = store.get('latest_index')
     store.set('latest_index', latest_index + 1)
     return latest_index, words[latest_index % len(words)]
+
 
 def words_gen():
     while True:
