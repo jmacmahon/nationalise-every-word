@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 from nationalise_every_word import words_gen, write_tweet, config
 

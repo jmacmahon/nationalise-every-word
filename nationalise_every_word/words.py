@@ -31,12 +31,11 @@ with open(config['words_file'], 'r') as words_file:
 
 store = Store(config['store_file'], {'latest_index': 0})
 
-@contextmanager
 def pop_word():
     latest_index = store.get('latest_index')
-    yield latest_index, words[latest_index % len(words)]
     store.set('latest_index', latest_index + 1)
+    return latest_index, words[latest_index % len(words)]
 
 def words_gen():
-    with pop_word() as (index, word):
-        yield index, word
+    while True:
+        yield pop_word()
