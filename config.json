@@ -1,0 +1,13 @@
+{
+  "keys": {
+    "consumer_key": "",
+    "consumer_secret": "",
+    "access_token_key": "",
+    "access_token_secret": ""
+  },
+  "words_file": "british-english-small",
+  "store_file": ".store.json",
+  "format": "nationalise {}",
+  "interval": 1800,
+  "error_log": ".error.log"
+}
