@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from nationalise_every_word import words_gen, write_tweet, config
 
 from time import sleep
