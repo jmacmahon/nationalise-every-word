@@ -15,7 +15,7 @@ def run():
         except Exception as e:
             message = ('Caught an exception on word {} ' +
                        'at index {}:').format(word, word_index)
-            log = format_exception(*sys.exc_info())
+            log = format_exception(*exc_info())
             with open(config['error_log'], 'a') as error_log:
                 error_log.writelines((message, log))
             print((message, log))
